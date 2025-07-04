@@ -1,0 +1,218 @@
+/* Author: Aditi Anil Pulikottil */
+
+/*----------------------  Project Section  ----------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+/* -------------  Project Page 1  -------------- */
+
+#project_pg1_div{
+    min-height: 100vh;
+    background-color: rgb(24, 35, 15);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    position: relative;
+    gap:10vh;
+    box-shadow: inset 0 0 0px rgb(0, 255, 156); /* Start with no glow */
+    transition: box-shadow 0.8s ease; /* Smooth transition */
+    padding:20px;
+
+}
+#project_pg1_div.glow {
+  box-shadow: inset 0 0 30px rgb(0, 255, 156); 
+}
+
+/* --------- Project-1 Details  --------- */
+
+#project_pg1_header{
+    margin-top: 30px;
+    position: relative;
+    color:rgb(254, 255, 167);
+    z-index:10;
+    font-size:2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    text-decoration-line: underline;
+}
+
+#project1_info{
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    background-color: rgb(254, 255, 167);
+    border: 3px white solid;
+    color:rgb(37, 95, 56);
+    border-radius: 2%;
+    margin:0px 30px 0px 30px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    filter: drop-shadow(8px 8px 10px rgb(0, 255, 156));
+}
+
+#project1_info {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+#project1_info.pop_up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#project1_subheader{
+    font-size:1.8rem;
+}
+#project1_intro{
+  font-size:1.5rem;
+  text-align: center; 
+  word-wrap: break-word; 
+}
+
+#tools_used_P1
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#tools_header_P1{
+    font-size:1.4rem;
+    margin-bottom: 10px;
+}
+
+#tools_P1{
+    margin-top:0;
+    font-size:1.3rem;
+    text-align: center; 
+    word-break: keep-all; /* Prevents splitting words unless necessary */
+    overflow-wrap: break-word; 
+    padding:10px;
+}
+
+/* ------  View More button ------ */
+
+#P1_view_more_btn{
+    position: relative;
+    --offset:3px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 2%;
+    color:white;
+    background-color:black ;
+    font-size:1.2rem;
+    border-radius: 44%;
+    padding:15px;
+    border:2px black solid;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* ------ Effects for revolving border around View More button ------ */
+
+#P1_view_more_btn::before{
+    content:'';
+    background: conic-gradient(white, transparent, white);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    aspect-ratio: 1;
+    width:100%;
+    animation: rotate 2s linear infinite;
+    z-index:-2;
+
+}
+#P1_view_more_btn::after{
+    content:'';
+    background:inherit;
+    border-radius:inherit;
+    position: absolute;
+    inset:var(--offset);
+    height:calc(100% -2*var(--offset));
+    width:calc(100% -2*var(--offset));
+    z-index:-1;
+
+} 
+
+#P1_view_more_btn:hover{
+    scale:1.1;
+    color:rgb(182, 255, 161);
+}
+
+@keyframes pop_up {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+}
+
+
+/* --------- Media Queries for Responsiveness  --------- */
+
+/* ---- For Bigger Tablets and PCs ----- */
+
+@media(min-width: 768px){
+    #project_pg1_header{
+        font-size:3rem;
+
+    }
+}
+
+/*------ For Mobile Phones ------*/
+
+@media (max-width:415px){
+    #project_pg1_div{
+        gap:50px;
+    }
+    #project1_info{
+        height:auto;
+        width:90%;
+        font-size:1rem;
+    }
+
+    #project1_intro{
+        font-size:1.2rem;
+    }
+
+    #project1_subheader{
+        font-size:1.5rem;
+    }
+
+    #tools_header_P1{
+    font-size:1.2rem;
+    }
+
+    #P1_view_more_btn{
+        font-size: 1rem;
+    }
+
+    #tools_P1 {
+    padding: 10px; /* Add padding */
+    width: 90%;     /* Make it responsive */
+    box-sizing: border-box; 
+    font-size:1.1rem;
+}
+}
+
