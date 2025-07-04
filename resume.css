@@ -1,0 +1,120 @@
+/* Author: Aditi Anil Pulikottil */
+
+/*----------------------  Resume Section  ----------------------- */
+
+#resume_section{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgb(45, 3, 59);
+    gap:0px;
+    box-shadow: inset 0 0 0px rgb(193, 71, 233); /* Start with no glow */
+    transition: box-shadow 0.8s ease; 
+    overflow:hidden;
+
+}
+
+#resume_section.glow {
+  box-shadow: inset 0 0 30px rgb(193, 71, 233); /* Add glow around viewport borders*/
+}
+#resume_header{
+    color:rgb(229, 184, 244);
+    font-size: 2.5rem;
+    margin: 10px;
+    padding:1.5%;
+    text-decoration: underline;   
+}
+#resume_window{
+    height:75%;
+    width:55%;
+    padding: 2% 2% 2% 2%;
+    margin-bottom:80px;
+    border: 3px white solid;
+    
+}
+#dabba{
+    height:100%;
+    width:100%;
+    display:block;
+
+}
+
+
+/*------------  Media queries for responsiveness  -------------- */
+
+
+/* ------ For smaller PCs ------*/
+
+@media(max-width: 1200px){
+    #resume_section{
+        gap:40px;
+    }
+    #resume_header{
+        font-size:2.6rem;
+    }
+    #resume_window{
+        margin-bottom:80px;
+        padding: 10px 10px 10px 10px;
+        width:80%;
+        height:70%;
+    }
+
+}
+
+/* ------ For Tablets ------*/
+
+@media (max-width: 820px){
+    #resume_window{
+        margin-bottom:80px;
+        padding: 10px 10px 10px 10px;
+        width:80%;
+    }
+}
+
+/* ------ Mobile Phones ------*/
+
+@media (max-width: 540px){
+    #resume_section{
+        gap:40px;
+    }
+    #resume_header{
+        font-size:2.3rem;
+    }
+    #resume_window{
+        margin-bottom:40px;
+        padding:10px;
+        width:85%;
+        height:60%;
+    }
+}
+
+/* ------ For Smaller Phones ------*/
+
+@media(max-width:390px){
+    #resume_section{
+        gap:20px;
+    }
+    #resume_window{
+        margin-bottom:40px;
+        padding:10px;
+        width:90%;
+        height:65%;
+    }
+    #resume_header{
+        font-size:2rem;
+    }
+}
+
+/* ------ For Foldable Phones ------*/
+
+@media(max-width:345px){
+    #resume_window{
+        margin-bottom:40px;
+        padding:10px;
+        width:90%;
+        height:55%;
+    }
+
+}
