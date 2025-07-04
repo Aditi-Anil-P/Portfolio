@@ -1,0 +1,268 @@
+/* Author: Aditi Anil Pulikottil */
+
+/*----------------------  About Section  ----------------------- */
+#about_section{
+    height:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* -------------  About Page 1  -------------- */
+
+#about_page1{
+    background-color: rgb(18, 9, 49);
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0px aqua; /* Start with no glow */
+    transition: box-shadow 0.8s ease; 
+}
+
+#about_page1.glow {
+  box-shadow: inset 0 0 30px aqua; /* Aqua inner glow when active */
+}
+
+/* --------- Profile Picture --------- */
+
+#profile{
+  margin:0 auto;
+  position: relative;
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  background-color: #123458;
+  height: 550px;
+  width: 1100px;
+  opacity:0;
+  border-radius: 5px;
+  filter: drop-shadow(8px 8px 15px aqua);
+  padding: 0px 20px 0px 0px;
+  border: 2px solid azure;
+  transform: translateY(100px); /* start state */
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+#profile.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#profile_pic{
+  margin-left: 50px;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+}
+
+/* --------- About me --------- */
+
+#about_me{
+  margin-left: 15px;
+  color:cornsilk;
+  font-size: 26px;
+  font-family:'Times New Roman', Times, serif;
+  opacity:0;
+  animation: 0.5s fade_in ease-in 7.5s forwards;
+
+}
+#profile.visible #about_me{
+  animation: fade_in 0.5s ease 1.5s forwards; 
+}
+
+#about_header {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: bisque;
+  text-underline-position: below;
+  text-decoration-line: underline;
+}
+
+/* -------------  About Page 2  -------------- */
+
+
+#about_page2{
+  min-height: 100vh;
+  background-color: rgb(58, 5, 25);
+  display: flex;
+  gap:100px;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  box-shadow: inset 0 0 0px rgb(255, 91, 151); 
+  transition: box-shadow 0.8s ease; 
+}
+
+#about_page2.glow{
+  box-shadow: inset 0 0 30px rgb(255, 91, 151);
+
+}
+
+/* --------- College image --------- */
+
+#college_img{
+  margin-top: 20px;
+  height:550px;
+  width:800px;
+  border: 2px rgb(255, 243, 199) solid;
+  border-radius: 5%;
+  filter: drop-shadow(8px 8px 10px rgb(255, 91, 151));
+}
+
+/* --------- Qualification details --------- */
+
+#education_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: rgb(255, 243, 199);
+  height: 400px;
+  width:400px;
+  border:3px rgb(239, 136, 173) solid;
+  border-radius: 25%; 
+  filter: drop-shadow(8px 8px 7px rgb(255, 91, 151));
+}
+
+#education_info{
+  color:rgb(247, 65, 143);
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 500;
+  font-size:1.8rem;
+  padding: 20px;
+  text-align: center; 
+  word-wrap: break-word; 
+}
+
+/* ------- Animations ------- */
+
+#college_img,
+#education_box {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+
+#college_img.pop_up,
+#education_box.pop_up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------- Media Queries for Responsiveness --------- */
+
+
+/* --- Laptops and Desktops ------ */
+
+@media (max-width: 1470px) {
+  #profile {
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #profile_pic {
+    margin: 20px auto;
+    width: 250px;
+    height: 250px;
+  }
+  #about_page2{
+    flex-direction:column;
+    gap:30px;
+  }
+
+  #about_me {
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  #about_header {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  #college_img {
+    height: 40%;
+    width:60%
+  }
+
+  #education_box {
+    width: 85%;
+    height: auto;
+    padding: 20px;
+    border-radius:8px;
+  }
+
+  #education_info {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+/* ------ Smaller PCs --------*/
+
+@media (max-width: 1025px) {
+  #about_page1,
+  #about_page2 {
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  #college_img {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  #education_box {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* ------ Tablets  --------*/
+
+@media (max-width: 620px) {
+  #profile {
+    padding: 10px;
+    width: 95%;
+  }
+
+  #about_me {
+    font-size: 18px;
+  }
+
+  #education_info {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  #college_img {
+    height:50%;
+    width: 100%;
+  }
+
+  #education_box {
+    border-radius: 15px;
+  }
+}
+
+/* ------ Mobile Phones --------*/
+
+@media (max-width: 440px) {
+    #college_img{
+        height:40%;
+        width:100%;
+    }
+
+    #education_box{
+        width:85%;
+        height:auto;
+    }
+}
