@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Anil P</title>
+    <link rel="stylesheet" href ="contact.css"/>
+    <link rel="stylesheet" href="home.css"/>
+    <link rel="stylesheet" href="project.css"/>
+    <link rel="stylesheet" href ="project_page2.css"/>
+    <link rel="stylesheet" href="about.css"/>
+    <link rel="stylesheet" href ="resume.css"/>
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <div id="name">Aditi Anil Pulikottil</div>
+    <section id="home_section">
+        <div class="nav_bar">
+            <a class="nav_bar_contents" href="#about_section" id="about">About</a>
+            <a class="nav_bar_contents" href="#projects_section" id="projects">Projects</a>
+            <a class="nav_bar_contents" href="#resume_section" id="resume">Resume</a>
+            <a class="nav_bar_contents" href="#contact_section" id="contact">Contact</a>
+        </div>
+        <div class="taglines">
+            <p class ="tags" id="tag-1"> Learning....</p>
+            <p class ="tags" id="tag-2"> Innovating....</p>
+            <p class ="tags" id="tag-3">Creating.....</p>
+        </div>
+    </section>
+
+    <section id="about_section">
+        <div class="about_page" id="about_page1" >
+            <div id ="profile">
+                <h1 id="about_header">About Me</h1>
+                <img id ="profile_pic" src="images/me.jpg" alt="Profile Picture">
+                <p id="about_me">
+                    Hey, I'm Aditi — a fellow undergrad busy upskilling, exploring technologies and building things that make life easier.
+                </p>
+            </div>
+        </div>
+
+        <div class = "about_page" id="about_page2">
+                <img id="college_img" src ="images/college_img.jpg" alt="IIEST Shibpur">
+                <div id="education_box">
+                    <p id="education_info"> I am currently pursuing my Bachelor of Technology in Information Technology at IIEST Shibpur, Kolkata, India</p>
+                </div>
+        </div>
+    </section>
+
+    <section id="projects_section">
+        <div class="project_pg1" id="project_pg1_div">
+            <h1 id="project_pg1_header">Projects</h1>
+            <div id="project1_info">
+                <h2 id="project1_subheader">Procure-Smart</h2>
+                <p id="project1_intro">A robust interface with enables precision in procurement of products through automation and visual validation.</p>
+                <div id="tools_used_P1">
+                    <h3 id="tools_header_P1">Languages/Tools/Frameworks</h3>
+                    <p id="tools_P1">Python[Matplotlib ,CSV, Pandas], Google Colab</p>
+                </div>
+                <a href="project1_docs.html" target="_blank">
+                    <button id="P1_view_more_btn">View More</button>
+                </a>
+            </div>
+        </div>
+        <div class="project_page2" id="project_P2_div">
+            <div id="P2_contents">
+                <video id ="model_3D" controls preload="none" tabindex="-1"alt="Prototype Video">
+                    <source src="videos/aewpd_3D_model.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="project2_info">
+                    <h3 id="project2_subheader">AEWPD:
+                    </br>
+                    Automated & Eco-Friendly Wetland Preservation Device
+                    </h3>
+                    <p id="project2_intro">
+                        Designed an automated device for wetland aquacultures which 
+                        periodically monitors and controls water quality parameters, 
+                        enhancing aquacultural production and preserving wetlands.
+                    </p>
+                    <a href="project2_docs.html" target="_blank">
+                        <button id="P2_view_more_btn">View More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume_section">
+        <link rel="stylesheet" href ="resume.css"/>
+        <h2 id="resume_header">Resume</h2>
+        <div id="resume_window"><iframe tabindex="-1" src="documents/resume.pdf#toolbar=1&navpanes=0&scrollbar=0" type="application/pdf" id="dabba"></iframe> </div>
+    </section>
+
+    <section id="contact_section">
+        <h2 id="contact_header">Get in touch!</h2>
+        <div id="contact_links">
+            <div id="mail">
+                <img src="images/mail_icon.png" id="mail_icon" alt="mail icon">
+                <a href="https://mail.google.com/mail/?view=cm&to=aditianilp@gmail.com" class="contact_btn" id="mail_link" target="_blank" >Mail:  <strong>aditianilp@gmail.com</strong></a>
+            </div>
+            <div id="linkedin">
+                <img src="images/linkedin _icon.png" id="linkedin_icon" alt="linkedin icon">
+                <a href="https://www.linkedin.com/in/aditi-anil-p-0a19482a8/" class="contact_btn" id="linkedin_link" target="_blank"> Linkedin</a>
+            </div>
+            <div id="github">
+                <img src="images/github_icon.png" id="github_icon" alt="github icon">
+                <a href="https://github.com/Aditi-Anil-P" class="contact_btn" id="github_link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+    <script src="file.js"></script>
+    
+</body>
+</html>
