@@ -1,0 +1,162 @@
+/* Author: Aditi Anil Pulikottil */
+
+/*----------------------  Project Section (Page-2) ----------------------- */
+
+#project_P2_div{
+    padding-top:1px;
+    min-height:100vh;
+    width:100%;
+    background: rgb(91, 2, 61);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0px pink; /* Start with no glow */
+    transition: box-shadow 0.8s ease; /* Smooth transition */
+
+}
+#project_P2_div.glow {
+  box-shadow: inset 0 0 30px rgb(251, 98, 124); 
+}
+
+/* --------- Div containing Project-2 Contents --------- */
+#P2_contents{
+    color:rgb(121, 2, 82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    background:rgb(254, 255, 167);
+    width:75%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left:1%;
+    padding-right: 1%;
+    border-radius:4%;
+    border: 5px white solid;
+    gap:30px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    filter: drop-shadow(8px 8px 10px rgb(255, 90, 118));
+    margin:20px;
+}
+
+#P2_contents {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+
+#P2_contents.pop_up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------  Project-2 Details --------- */
+
+#project2_subheader{
+    font-size:1.6rem;
+    text-align: center; 
+    word-wrap: break-word; 
+}
+
+#project2_info{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width:30%;
+    height:auto;
+
+}
+
+#project2_intro{
+    font-size:1.3rem;
+    text-align: center; 
+    word-wrap: break-word; 
+}
+
+
+/* --------- 3D Model Video --------- */
+
+#model_3D{
+    width:58%;
+    height:35%;
+}
+
+
+/* ------  View More button ------ */
+
+#P2_view_more_btn{
+    position: relative;
+    --offset:3px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 2%;
+    color:white;
+    background-color:black ;
+    font-size:1.2rem;
+    border-radius: 44%;
+    padding:15px;
+    border:2px black solid;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* ------ Effects for revolving border around View More button ------ */
+
+#P2_view_more_btn::before{
+    content:'';
+    background: conic-gradient(white, transparent, white);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    aspect-ratio: 1;
+    width:100%;
+    animation: rotate 2s linear infinite;
+    z-index:-2;
+
+}
+#P2_view_more_btn::after{
+    content:'';
+    background:inherit;
+    border-radius:inherit;
+    position: absolute;
+    inset:var(--offset);
+    height:calc(100% -2*var(--offset));
+    width:calc(100% -2*var(--offset));
+    z-index:-1;
+
+} 
+
+#P2_view_more_btn:hover{
+    scale:1.1;
+    color:rgb(182, 255, 161);
+}
+
+/* --------- Media Queries for Responsiveness  --------- */
+
+/* For Tablets and Mobile Phones */
+
+@media (max-width:980px){
+    #P2_contents{
+        flex-direction: column-reverse;
+        padding:1%;
+        width:85%;
+    }
+    #project2_info{
+        width:auto;
+        height:30%;
+    }
+
+    #model_3D{
+    width:88%;
+    height:65%;
+    }
+
+    #P2_view_more_btn{
+        font-size: 1rem;
+        margin-bottom: 0.5%;
+    }
+}
+
