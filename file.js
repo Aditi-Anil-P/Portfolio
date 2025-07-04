@@ -9,7 +9,7 @@
 window.addEventListener('load', () => {
     setTimeout(() => {
       document.getElementById('home_section').scrollIntoView({ behavior: "auto" });
-    }, 150); 
+    }, 180); 
   });
 
 
