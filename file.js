@@ -6,11 +6,11 @@
 
 //Handling Auto Scroll to the resume section due to the iframe
 
-window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.getElementById('home_section').scrollIntoView({ behavior: "auto" });
-    }, 200); 
-  });
+// window.addEventListener('load', () => {
+//     setTimeout(() => {
+//       document.getElementById('home_section').scrollIntoView({ behavior: "auto" });
+//     }, 100); 
+//   });
 
 
 // Getting necessary elements bt their ID

@@ -163,11 +163,11 @@ html, body {
 /*----------- Mobile Phones --------- */
 
 @media (max-width: 480px){
-  .header{
+  .nav_bar{
     display:flex;
     justify-content: center;
   }
-  .header_contents{
+  .nav_bar_contents{
     font-size: medium;
     margin: 40px 10px 10px 10px;
     padding: 5px 5px 5px 5px;
