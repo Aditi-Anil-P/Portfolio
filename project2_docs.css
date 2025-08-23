@@ -1,18 +1,20 @@
 body{
-    height:100vh;
-    background: linear-gradient(135deg, rgb(0, 255, 156), rgb(182, 255, 161),rgb(254, 255, 167),rgb(182, 255, 161), rgb(0, 255, 156));
+    min-height:100vh;
+    background: linear-gradient(135deg, rgb(25, 36, 94), rgb(6, 14, 44), rgb(6, 14, 44), rgb(25, 36, 94));
 }
 #aewpd_header{
     margin-top:50px;
     text-align: center;
-    color:rgb(46, 1, 78);
+    color:rgb(253, 247, 249);
     text-decoration: underline;
     font-size:2.5rem;
 }
 #aewpd_subheader{
+    margin-top: 1%;
     text-align: center;
-    color:rgb(46, 1, 78);
+    color:rgb(253, 247, 249);
     font-size:2rem;
+    margin-bottom:5%
 
 }
 #docs_div{
@@ -33,7 +35,7 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
-    border:3px navy solid;
+    border:3px rgb(119, 244, 255) solid;
     border-radius:10%;
     position:relative;
     transition: transform 0.3s ease;
@@ -41,6 +43,7 @@ body{
     font-size: 1.4rem;
     font-weight:200;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin:20px;
 
 }
 
